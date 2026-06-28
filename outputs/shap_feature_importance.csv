@@ -1,0 +1,443 @@
+Feature,MeanAbsSHAP
+num__Lipids,7.225507711940157
+num__Proteins,2.838413950950928
+num__Temperature,2.011824906078674
+num__FattyAcids,1.306819912800142
+num__Ash,0.9475827674870663
+num__HHVResource,0.7690633707031034
+num__Polarity,0.6699049485507865
+num__TotalTime,0.5940580816807127
+num__HoldingTime,0.428861089805166
+num__Cellulose,0.3894121127357199
+num__HeatingTime,0.38705418083675114
+num__HeatingRate,0.36425882417961225
+num__DryMatter,0.3514054190558543
+num__CarboHydrates,0.33254637643717005
+num__HemiCellulose,0.31441912375375136
+num__Guaiacol,0.2996243926264031
+cat__Details_Guaiacol,0.22362126710914396
+num__Sugar,0.21963269799569984
+cat__Resource_MicroAlgae,0.19957049143515498
+cat__Solvent_HEXANE,0.18793866297822207
+cat__Solvent_TOLUENE,0.15975221011404422
+cat__Details_Sunflower oil,0.15174037635381796
+num__AddQtty(g/L),0.1389291092412898
+cat__Details_Chlorella sorokiniana,0.11792901944666194
+cat__Solvent_DCM,0.11581704728004893
+cat__Details_Nannochloropsis sp.,0.11182777943689216
+num__Method,0.10911272591361801
+cat__Resource_FW,0.08833885432460943
+"cat__Origin_2020RAFCS1, CEA-Cadarache",0.08701132748307405
+num__AminoAcids,0.08156091729929288
+cat__Origin_FAGE USA Dairy Industry Inc. and Sunnyside dairy farm,0.08150168777987608
+num__Lignin,0.07998765885588068
+cat__Details_Whey-Manure,0.0644300462830642
+cat__Additive_Na2CO3,0.054432051401093064
+cat__Solvent_TCM,0.052922237456562896
+cat__Details_Mixture,0.049629236507871606
+cat__Resource_Model,0.044240466800363046
+cat__Additive_K2CO3,0.03941309610896046
+cat__Origin_Acros Organics,0.03882309776333865
+cat__Additive_H2-NaOH,0.034567586971919036
+cat__Origin_ENN Science & Technology,0.033731661504701874
+cat__Origin_ChampaignIll,0.03033785329086957
+cat__Origin_Branches,0.027362670996328893
+cat__Details_LysineLatose,0.021792814505796492
+cat__Origin_Ghent University,0.021475561893777695
+cat__Solvent_EA,0.019930881603006545
+cat__Origin_China,0.01866171916521953
+cat__Resource_Mixture,0.017386313922175687
+num__CarboxylicAcids,0.01646328642937455
+cat__Resource_Wood,0.015912909378946474
+cat__Origin_Furniture,0.015397586684160105
+cat__Origin_University of Almería,0.014984308000327635
+cat__Details_Sawdust,0.014855403030685776
+cat__Details_Linolic Acid,0.014561463403711034
+cat__Details_MixedCurture Algae,0.013798312962109205
+"cat__Origin_James Cook University, Townsville",0.013490234111179729
+cat__Solvent_ACETONE,0.013021677326104241
+"cat__Origin_Reed Mariculture, Inc.",0.012920564060704312
+cat__Origin_PNNL,0.012489545763998213
+cat__Details_Ac Linolique,0.012435014719733267
+cat__HeatingProfile_Asymptote,0.011593230613129382
+cat__Origin_Local health shop,0.011521928783172219
+cat__Details_Beef,0.01142028320668422
+cat__Details_Cellulose,0.011339222784972035
+cat__Details_Scenedesmus sp.,0.010762068078491902
+cat__Origin_WWTP,0.010656403076388942
+cat__Origin_Latvijas finieris AS,0.009834935233553633
+cat__Origin_Muradel Pty Ltd,0.009833595914220686
+cat__Details_Chlorella sp.,0.009826690865731295
+cat__Origin_With Na2CO3,0.009806794140415947
+cat__Additive_Cobalt,0.009082591559468422
+cat__Origin_Reed Mariculture Inc.,0.00907872151625308
+cat__Details_Bovine serum albumin,0.008802128359140028
+cat__Additive_H2-ZnSO4,0.008550410834375693
+cat__HeatingProfile_Linear,0.00775090083771337
+"cat__Origin_2021RAFCS2, CEA-Cadarache",0.007579895275047686
+cat__Origin_Serana Europe,0.007025997890459496
+cat__Details_Palm Kernel Shell,0.0069953712230976595
+cat__Origin_Ingrepro B.V,0.006942224195185662
+cat__Origin_Fitness Laboratories,0.006842693998860216
+cat__Details_Nannochloropsis /CastorOil7:3,0.00682232169902561
+cat__Origin_National Center for Marine Algae and Microbiota,0.006617621377789416
+cat__Details_Nannochloropsis oculata,0.006536410924264759
+cat__Details_FW2,0.006465050087749045
+cat__Origin_FELCRA Nasaruddin Oil Palm Mill,0.006449743344466527
+cat__Details_Cupressus funebis,0.006150958697085803
+cat__Details_Kirchneriella sp.,0.006124939013417454
+cat__Additive_Dolomite,0.006107152372316203
+cat__Details_Nannochloropsis salina,0.00595633044152733
+cat__Details_Ulva ohnoi ,0.005885669079878606
+cat__Details_Tetraselmis sp.,0.005719797357912853
+cat__Origin_Aurospirul Spirulina farm  India,0.005692544183216157
+cat__Additive_CoMo/ATP,0.005631359136877933
+cat__Details_LysinePalmAcid,0.005614820290354385
+cat__Details_Glucose,0.005317376132256786
+cat__Additive_H2,0.0052489615353441856
+num__Glycerol,0.00510251913753607
+cat__Additive_Montmorillonite,0.005086654363168995
+"cat__Origin_FELCRA Nasaruddin Oil Palm Mill, Bota, Perak, Malaysia",0.005073336503130496
+cat__Details_Spent Coffee Grains,0.00499170684599315
+"cat__Details_Cyanophyta consortium (Microcystis, Basketballalgae, Oscillatoria sp., Nostoc, seaweed)",0.0048004122767201915
+cat__Details_Soy Protein Isolate,0.004708559647300999
+cat__Origin_Leaves,0.0046874713057404906
+cat__Details_Spirulina sp.,0.004641489447922379
+cat__Origin_RAS,0.004610216871391728
+cat__Details_Nannochloropsis gaditana,0.004584449886903933
+cat__Resource_FPW,0.004564281648556376
+cat__Origin_Arizona State University,0.00454718304406246
+cat__Origin_Alb-Castor,0.004414513847052211
+cat__Details_Soy Protein,0.004390991706631418
+cat__Additive_Kaoline,0.004284627235506448
+cat__Details_Asparagine,0.0042600759755072656
+cat__Details_Scenedesmus almeriensis,0.004233292659217458
+cat__Details_Cunninghamia lanceolata,0.0041386830741374425
+cat__Origin_Chem-Supply,0.003931075291936277
+cat__Details_Oleic acid,0.0038405785322464035
+cat__Details_Chlorella pyrenoidosa,0.003809181342606246
+cat__Origin_CEA-H1,0.0038034516738080946
+cat__Details_PalmaticAcid,0.003722812361674182
+cat__Details_Glycine,0.003587316682073012
+cat__Origin_Sigma-Aldrich,0.003568834904104158
+cat__Details_Platanus,0.003537948554401174
+"cat__Origin_Aurospirul spirulina farm and others Kozhikode, India",0.0034726485940928856
+cat__Resource_MacroAlgae,0.0034405018132576543
+cat__Details_LysineLactosePA,0.003435360946006556
+cat__Origin_Health food store,0.003346668989446089
+cat__Resource_Sewage,0.003323366858298124
+cat__Details_SawDust-Chlorella,0.0033217113436455007
+cat__Origin_Ingrepro B.V.,0.003269568755809881
+cat__Details_Palm kernel shells,0.003264571661438865
+cat__Origin_Les Vergers de Boiron - BC KF moisture,0.0032640098857466522
+cat__Origin_25/75,0.003240578125131379
+cat__Origin_Unknown,0.0032174921170976
+cat__Origin_50/50,0.003215292870168314
+cat__Origin_Alga Energy SA,0.0031877969732398695
+cat__Origin_Lanyi Chemical Products Co,0.003166995806673713
+cat__Origin_Taihu lake in China,0.0031336534165009645
+cat__Details_Castor oil,0.003034768338520289
+cat__Additive_Seawater,0.003008924143437007
+cat__Details_Pine wood,0.002976184817397741
+"cat__Origin_SUEZ, Montpellier",0.002948416930833192
+"cat__Origin_Shandong Binzhou Tianjian Biotechnology Co., Ltd.",0.002930097245561676
+cat__Details_Spirulina platensis,0.002908369471406395
+cat__Details_Fraxinus mandshurica,0.002906800397159322
+cat__Details_Salix,0.002905922018218988
+cat__Details_Pectin,0.0028353152181256826
+"cat__Origin_Tim Hortons, Truro, Canada",0.002833343670750116
+cat__Details_New Mex Univ Restaurant,0.002821343451725643
+cat__Details_LactosePlmAcid,0.002763487065505795
+cat__Additive_HCCOOH,0.002763178287246361
+"cat__Origin_KIER Daejeon, Korea",0.0027549151779965924
+cat__Origin_Corn-Soy,0.0026394552629406187
+cat__Details_Spirulina+Rice Husk,0.0024655475937391132
+cat__Origin_The University of Adelaide,0.002424780655558012
+cat__Additive_Indus water,0.0024237097211929474
+cat__Details_Desmodesmus sp.,0.0024035748400080526
+cat__Origin_WWT 5587.1 strain,0.002353996132836801
+cat__Origin_TCI America,0.0022963568460893464
+cat__Additive_H2-Ni,0.0022958704312058147
+cat__Origin_University of Kentucky,0.002281626337498045
+cat__Solvent_DMSO,0.0022715650795275925
+cat__Origin_Dens 0.3,0.0022563363881012155
+cat__Additive_H2-Na2CO3,0.0021857190914480362
+cat__Origin_Supermarket,0.002154693177347512
+cat__Details_Viburnum odoratissinum,0.0020968046038994576
+cat__Details_FW2-Rec,0.0020759178532895545
+cat__Details_FFOM,0.0020557962515454563
+cat__Details_Brewers' Spent Grains,0.002031276286294154
+cat__Details_Sunfower Oil,0.002021833875638907
+cat__Details_Chlorella vulgaris,0.0020086285033918292
+cat__Details_Lactose,0.0019752936757808227
+cat__Details_Cyanidioschyzon merolae : Galdieria sulphuraria 8:2,0.0019526333462553788
+cat__Origin_fromFish Park Aquarium co. LTD,0.0019187016969773592
+cat__Origin_75/50,0.0019034748057030996
+cat__Origin_Corn-Sunf,0.0019001815308048006
+cat__Details_Sawdust Birch,0.001874149849690463
+cat__Origin_NutraBio,0.0018652035837566736
+cat__Origin_Crisco,0.0018456232447244196
+cat__Origin_Tim Hortons+SawMill,0.0018247173435281762
+cat__Details_Black Currant Pommace,0.0017838845615589325
+cat__Details_Nannochloropsis /Protein5:5,0.0017755482575503446
+cat__Origin_Les Vergers de Boiron - BC air dry,0.0017493839503614473
+cat__Origin_Supermarket Xian,0.0017430200282090933
+cat__Origin_ENN Science & Technology Co.,0.0017375475164041513
+cat__Solvent_ISOPROPANOL,0.001733164247690097
+cat__Origin_Shandong Yantai Hairong MicroAlgaeBreeding Co.,0.0017177105631689957
+cat__Details_Palm Mesocarp Fiber,0.001714352147707452
+cat__Origin_Ref,0.0017090538452228749
+cat__Details_Dunaliella tertiolecta,0.0016983048817094503
+cat__Origin_Tianjin MicroAlgaeBioTechnologies,0.0016488367155557788
+cat__Origin_PNNL-High Lipid,0.0016300472455029501
+cat__Origin_Dianchi Lake,0.00157168490534458
+cat__Origin_Soy-Sunf,0.001567673824204087
+cat__Details_Alkali Lignin,0.0015489619537233806
+cat__Resource_Herb,0.0015378416815891671
+cat__Details_Mix Real Food,0.0014948328316861002
+cat__Details_Pinus massoniana,0.0014738757164823395
+cat__Details_Cladophora sp.,0.0014365894286043378
+cat__Details_VegetableTomCarBroc,0.001385407300592135
+cat__Origin_Boise State University,0.0013821876628288409
+cat__Origin_PNNL-Commercial,0.0013458862842745725
+cat__Origin_Sigma Aldrich,0.0013035249930348019
+cat__Origin_Farm Hainan province (China,0.001293195165759023
+cat__Origin_WWT Soos,0.0012839702069601913
+cat__Details_Glucose-Glycine,0.001265006679174767
+cat__Details_Bacillariophyta sp.,0.0012477339301525656
+cat__Origin_Wudi Lvqi Bioengineering Co,0.0012467153157480293
+cat__Details_Cyanophyta sp.,0.0012287327633412684
+cat__Details_Chicken,0.0012196611364670407
+cat__Origin_Tokyo Chemical Industries,0.0012157288615495703
+cat__Details_Phaeodactylum tricornutum,0.0011829674590289828
+cat__Details_HamburgerBun,0.0011742958605362242
+cat__Details_SaladDressing,0.001170628492566492
+cat__Origin_Media 5587.1 strain,0.0011435277493189067
+cat__Details_Amylose,0.001095062294314909
+"cat__Origin_2020RAFCS4, CEA-Cadarache",0.0010857487036373184
+cat__Origin_Spectrum Chemical Mfg. Corp.,0.0010721237518598876
+cat__Origin_VWR,0.0010707101014230391
+cat__Origin_Unkown,0.0010673590324410324
+cat__Details_Chlorella protothecoides,0.0010642500540782242
+cat__Solvent_ETHER,0.0010618451152539263
+cat__Details_Streaky pork,0.0010315865061788212
+cat__Details_Pine and Spruce,0.001018609045346896
+cat__Additive_HCOOH,0.0010178505926540682
+cat__Details_CreamCheese,0.0010131762226364997
+cat__Additive_Molybdenium+Cobalt,0.0010123301165794768
+cat__Details_Derbesia tenuissima ,0.0009809049237495876
+cat__Details_Pavlova sp.,0.0009667723485254072
+cat__Details_Starch,0.0009516916340784397
+cat__Origin_UNGDA - biocrude air dry,0.0009515805246070601
+cat__Origin_KUET,0.0009464515724182943
+cat__Details_Cyanidioschyzon merolae ,0.0009355849285646013
+cat__Origin_Urbana-Champaign Sanitary District,0.0009340243241641891
+cat__Details_Nannochloropsis /Glucose5:5,0.0009249535691609524
+cat__Details_Nannochloropsis /Protein6:4,0.0009192432058534978
+"cat__Origin_EGE, Oslo",0.0009088851156204697
+cat__Details_Chaetomorpha sp.,0.0009070804389657188
+cat__Details_OrangeBananaPeel,0.0008767460388469634
+cat__Origin_Taihu Lake China,0.0008596751182210151
+cat__Details_Chitin,0.0008508356292382622
+cat__Details_Glutamine,0.000842048061224261
+cat__Origin_Wuxi China,0.0008356188748578165
+"cat__Origin_Carbosynth),",0.0008324163896168905
+cat__Details_Nannochloropsis /CastorOil5:5,0.0008244295329981222
+cat__Origin_Beijing suburb,0.0008243629517638218
+cat__Origin_With Form Acid,0.0007831158503652601
+cat__Details_Oedogonium sp.,0.000781908091488776
+cat__Origin_Fisher Scientific,0.0007676503974687496
+cat__Origin_Les Vergers de Boiron,0.0007496118689762438
+cat__Origin_PNNL-HighProt,0.0007474038883883404
+cat__Origin_Buy Algae,0.0007393474245597374
+cat__Origin_Hebei provice China,0.0007299305947623843
+cat__Additive_Molybdenium,0.0007285683635423404
+cat__Details_Cinnamomum,0.0007265438399567318
+cat__Origin_KRS101,0.0007223873439498651
+cat__Details_Protein Extracted Grass,0.0007198162748551154
+cat__Origin_Shandong Yantai HaiRong Biotech,0.0007087814128658897
+cat__Details_Isochrysis sp.,0.0007063554641422288
+cat__Details_Ligning alkali,0.0006941295738993253
+cat__Origin_Shaanxi Sciphar Natural Products Co,0.0006907109432126878
+cat__Origin_Denmark,0.0006853101037561415
+cat__Details_Sargassum sp.,0.0006823820613605252
+cat__Details_Aurantiochytrium sp.,0.0006758175578150495
+cat__Origin_Seawin Biotech Group Co.,0.0006737444737791759
+cat__Origin_Tianjin MicroAlgaeBioTechnologies Co.,0.0006523081795158114
+"cat__Origin_Subitec GmbH, Germany",0.00065126141845165
+cat__Details_Amylopectin,0.0006509001541413594
+cat__Details_Galdieria sulphuraria ,0.0006436049032112924
+cat__Details_Enteromorpha pr.,0.0006411299491555102
+cat__Details_Oil-palm empty fruit bunch,0.0006373151294233343
+cat__Details_Grape Pommace,0.0006344206883714158
+cat__Details_DFOR,0.0006306003429716998
+"cat__Origin_Rongcheng Haihao Biotechnology co., LTD",0.0006264638204340103
+cat__Details_Enteromorpha prolifera,0.0006237755134030001
+cat__Details_Sawdust-Seaweed,0.000613377986688285
+cat__Details_Chlorella vulgaris ,0.0006133219748706944
+cat__Origin_Brass du Dauphiné,0.0006079240333566763
+cat__Origin_CEA,0.0006037511171897513
+cat__Origin_Corn-Soy-Sunf,0.0005969146519636354
+cat__Details_Primary,0.000582388519681552
+cat__Additive_NiMo/AlMg Catal,0.0005821204258267716
+cat__Details_Casein,0.0005818705928208756
+cat__Additive_ATP,0.0005809204512785696
+cat__Origin_Veraval,0.0005793035641577169
+cat__Origin_University of Leeds,0.000577828724220119
+cat__Origin_MP Biomedicals,0.0005774365916846871
+cat__Details_AWtoSW 0to1,0.0005609070115249035
+cat__Details_Alanine,0.0005606738567651501
+cat__Origin_Alfa Aesar,0.0005538944228044584
+cat__Details_SCG+WPB,0.0005511369354531951
+cat__Details_Oil-palm petioles,0.0005460593187311245
+cat__Details_Raspberry Pommace,0.0005460579182923836
+cat__Details_Coconut shell,0.0005307677944757244
+cat__Details_Phenylalanine,0.0005289489663691388
+cat__Details_Scenedesmus dimorphous,0.0005261259042666222
+cat__Origin_Pellets with Cata,0.0005257154056625006
+cat__Details_SCG+CS,0.0005255645508993563
+cat__Details_Lysine,0.0005204428927929906
+cat__Origin_Commercial Suplliers,0.000516452274267185
+cat__Details_Carboy batch jar,0.0005158163043023295
+"cat__Origin_NOW FOODS, Bloomingdale, IL",0.0005118433176023448
+"cat__Origin_My Elixir of Life, LLC",0.000511670615286621
+cat__Details_Glutamic Acid,0.0005101303586846839
+cat__Details_Ammi visnaga,0.0005043638513959039
+cat__Details_Nannochloropsis /CastorOil6:4,0.0005043091124489226
+cat__Details_Leucine,0.000503597949030096
+cat__Details_Vinasses Beet,0.0005009186336875738
+cat__Origin_Saw Mill,0.000491057037647435
+cat__Details_Sludge,0.0004897588396596654
+cat__Details_Duckweed,0.00048810529220448697
+"cat__Origin_2020RAFCS2, CEA-Cadarache",0.0004860229802015859
+cat__Details_Porphyridium purpureum,0.0004652328858070503
+cat__Additive_Mo/ATP,0.00046174865822190265
+cat__Origin_Jiangsu Qiangsheng International Trade Co,0.00044914706040975484
+"cat__Origin_2021RAFCV1, CEA-Cadarache",0.0004472305141380663
+"cat__Origin_2020RAFCS3, CEA-Cadarache",0.0004393746279721931
+cat__Origin_Open tank,0.00042960898191428176
+cat__Origin_University of Illinois,0.00042324907000998376
+cat__Origin_Pellets,0.0004210291083751116
+cat__Details_Beech,0.0004202141878876145
+cat__Details_Potato starch,0.00041668850231011746
+cat__Details_Swine Manure,0.0004135445011052846
+cat__Details_Maple Sawdust,0.00040723866967879146
+cat__Additive_Tap Water,0.0003941985258659535
+cat__Details_Tetraselmis suecia,0.0003917047105247779
+cat__Origin_Brass Drome - BC KF Moisture,0.00038365592137547727
+cat__Additive_K2CO3-CoMo/ATP,0.000382757195721442
+cat__Origin_Xian Jinheng Chemical Co,0.0003819146919444723
+cat__Origin_Woodshop Dalhousie Agro Campus,0.00038100484281973707
+cat__Details_Secondaire,0.00036904149486467075
+cat__Details_Albumin,0.0003663651649364521
+cat__Details_Porphyridium sp.,0.00035812068256156556
+cat__Details_Enteromorpha sp.,0.00035789510438931626
+cat__Details_Rice straw,0.00034645442555303595
+cat__Details_Cyanobacteria sp.,0.00033815944109476427
+"cat__Origin_Xinyu city, Jiangxi province, China",0.00033813198755580426
+cat__Details_Distylium racemosum,0.00033790820686522226
+cat__Details_SCG+PF,0.0003337559806516191
+cat__Details_Empty Fruit Bunch,0.00032929140099766834
+cat__Details_Pinewood,0.0003253084423823253
+cat__Details_Galdieria sulphuraria,0.00032054571558786624
+cat__Details_Populus tomentosa,0.00031163086593579016
+"cat__Origin_Greener Chemistry LLC and BDP Industries Inc., Greenwich, NY",0.0003073219341733386
+cat__Details_Digested anaerobic sludge,0.0003062695598995318
+"cat__Origin_City of Hatay, Turkey",0.0002944751226063496
+cat__Origin_NC AT State University farm,0.0002923727830393015
+cat__Details_Nannochloropsis /Protein9:1,0.000292137273037735
+cat__Details_Nannochloropsis /Protein8:2,0.0002910384078698785
+"cat__Origin_Aquapole, Grenoble",0.00029102460479139814
+cat__Origin_Plymouth Marine Laboratories,0.00028739760184769635
+cat__Details_Cattle Manure-Peanut Res,0.0002873412040039213
+cat__Details_Ulva fasciata,0.00028230055193544524
+cat__Additive_Co/ATP,0.0002758888976512857
+cat__Details_Spirulina-Entermorpha,0.00027588045114241254
+cat__Origin_Lesaffre,0.00027479291792664067
+cat__Additive_Milli Q Water,0.00027183877445803605
+cat__Origin_Qatar University,0.00025872669013344424
+cat__Origin_Solix Biofuels,0.0002536450911177239
+cat__Details_SpentCoffGr-Seaweed,0.00024974760125718546
+cat__Details_Oilive Residue,0.00023809285900201646
+cat__Details_Pittosporum,0.00023478735231962573
+cat__Additive_NaOH,0.00023074854743614873
+cat__Details_FW1,0.00022970181535977564
+cat__Origin_Dens 0.4,0.00022913624186803673
+cat__Details_Metroxylon sp. Stem,0.00022733644322481958
+cat__Origin_Melbourne Water,0.00022163011848952592
+cat__Origin_Cell-Castor,0.00021934928237150162
+cat__Details_SunflowerOil,0.00021579942970852215
+cat__Origin_Sukhbir Agro Energy,0.00021132976720997904
+"cat__Origin_Lake Dian, Yunnan province",0.00020994176818155827
+cat__Details_Sewage Sludge,0.00020853418924314372
+cat__Details_SpentCoffGr-Chlorella,0.0002004975499200053
+cat__Details_Sargassum tenerrimum,0.00020040369651863645
+cat__Details_White Pine Bark,0.00019175869501243952
+cat__Details_Red Seawead,0.00018754916418734538
+cat__Origin_Tim Hortons+Dollarama,0.00018676503588248292
+cat__Details_Nannochloropsis /Glucose7:3,0.00018644994056234694
+cat__Details_Barley Straw,0.00018532505195636444
+cat__Origin_Strirlings Farm Marked,0.00018347386979048386
+cat__Origin_Caspian Sea,0.00017575782744875496
+cat__Details_Cornstarch,0.00017514552437890974
+cat__Additive_Aluminium,0.00017476409000775895
+cat__Origin_Veraval (Gujarat),0.00017284787224203162
+cat__Details_Rubber tree,0.0001727317591346985
+cat__Additive_Aluminium+Cobalt,0.00017155638296496967
+cat__Details_Euglena sp.,0.0001707918553065493
+cat__Details_Feacal sludge,0.00016839285599183707
+cat__Details_Ulva  sp.,0.00016760168009643714
+cat__Origin_Urla Organic Agriculture Co. Izmir,0.00016751968938063505
+cat__Details_Oil-palm shell,0.00016659417336161328
+cat__Details_Phycocyanin,0.00016576525830556401
+cat__Origin_BioRefine Denmark A/S,0.00016017275497958372
+cat__Details_Open Pond,0.00015932323703516846
+cat__Origin_ Ram-Man Enterprises,0.00015880861358472144
+cat__Details_Albumin/Starch,0.00015664249144637575
+cat__Details_Cyanidioschyzon merolae : Galdieria sulphuraria 5:5,0.0001554230240055064
+cat__Origin_CSMCRI,0.0001548080511043496
+cat__Details_Vinasses Cane,0.00015280007357258162
+cat__Details_Human feaces,0.0001518734896963445
+cat__Origin_Tim Hortons,0.00015159237647342194
+cat__Details_Feacal sludge + Water Hyacinth,0.0001514991825780742
+cat__Details_Wheat straw,0.00015112949815095152
+cat__Details_FW-Wood,0.000150693155507834
+cat__Details_Bagasse pith,0.0001495413271264803
+cat__Details_Paper Filter,0.00014675027146082419
+cat__Origin_Shandong Binzhou Tianjian Biotechnology Co,0.00014504337413390322
+cat__Details_Pineapple leaf,0.00013982673294139306
+cat__Details_Dunaliella salina,0.0001387677708215576
+cat__Origin_Aalborg,0.00013465659159031705
+cat__Details_Corn Stalks,0.00013332530719967537
+"cat__Origin_Zhejiang Binmei Biotechnology Co., ltd., Ch",0.00013077319084371961
+cat__Details_Alaria esculenta,0.00012826077247972596
+cat__Details_Glucose+glycine,0.00012118026861358453
+cat__Origin_Cell-Alb-Castor,0.00011855270787737672
+"cat__Origin_Tianjin Jingu wastewater treatment plant, China",0.00011401998919968598
+cat__Details_Corn stalk,0.00011016728438058313
+cat__Origin_Dollarama,0.00010835883026214023
+cat__Solvent_ETHANOL,0.0001067715072559462
+cat__Origin_CEA-H1-FE,0.00010570755488174699
+cat__Details_AWtoSW 1to3,0.00010090062124801195
+cat__Origin_Vinhy Lesaffre,9.012869923361985e-05
+cat__Details_Chlorogloeopsis fritschii,8.854512728030025e-05
+cat__Details_Swine manure,8.646194028577713e-05
+"cat__Origin_Faridpur, Bangladesh",8.379145042632726e-05
+cat__Details_Albumin/Starch/Triolein,8.110853975714519e-05
+cat__Details_Nannochloropsis /Glucose9:1,8.008883129542e-05
+cat__Details_Cors Stalk,7.960667050142353e-05
+cat__Details_Oil-palm husk,7.903542480683713e-05
+"cat__Origin_Nanyang city, Henan province, China",7.26181256695759e-05
+cat__Details_Cattle Manure,7.195274230024341e-05
+cat__Details_Rice husk,6.771453913272517e-05
+cat__Origin_Swine Research Center at the University of Illinois,6.741473921829549e-05
+cat__Details_Porphyridium cruentum,6.282566195794191e-05
+cat__Details_AWtoSW 1to1,5.9906364371954286e-05
+cat__Details_Albumin/Tripalmitin,5.680462592663685e-05
+cat__Details_Cladophora glomerata,5.598009342343221e-05
+cat__Details_Peanut Residue,4.4762210088977325e-05
+cat__Details_Rice Straw,3.999493707956944e-05
+"cat__Origin_2021RAFCV3, CEA-Cadarache",3.936435458426622e-05
+cat__Details_Pinus,3.912816676182919e-05
+cat__Details_Coconut husk,3.399206172328621e-05
+cat__Details_FW1+BL,2.6058789240593304e-05
