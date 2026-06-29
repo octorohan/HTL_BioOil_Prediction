@@ -6,7 +6,7 @@ from .config import TEST_SIZE
 
 from .metrics import evaluate_model
 from .preprocessing import build_preprocessor
-
+from .results import create_results_dataframe
 
 def train_model(model, X, y):
 
@@ -28,6 +28,9 @@ def train_model(model, X, y):
 
     pipeline.fit(X_train, y_train)
 
+    train_pred = pipeline.predict(X_train)
+    test_pred = pipeline.predict(X_test)
+
     metrics = evaluate_model(
         pipeline,
         X_train,
@@ -36,4 +39,15 @@ def train_model(model, X, y):
         y_test,
     )
 
-    return pipeline, metrics
+    prediction_df = create_results_dataframe(
+        y_train,
+        train_pred,
+        y_test,
+        test_pred,
+    )
+
+    return (
+        pipeline,
+        metrics,
+        prediction_df,
+    )
