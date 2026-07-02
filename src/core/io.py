@@ -45,3 +45,14 @@ def save_figure(plt, filename):
     )
 
     print(f"Saved:\n{path}")
+
+    
+def load_model(filename):
+
+    path = MODEL_DIR / filename
+
+    model = joblib.load(path)
+
+    print(f"Loaded:\n{path}")
+
+    return model    

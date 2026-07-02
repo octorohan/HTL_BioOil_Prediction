@@ -1,4 +1,27 @@
-.venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Model files
+outputs/models/*.pkl
+
+# Temporary files
+*.log
+
+catboost_info/

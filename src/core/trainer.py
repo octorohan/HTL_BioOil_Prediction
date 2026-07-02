@@ -1,14 +1,22 @@
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 
-from .config import RANDOM_STATE
-from .config import TEST_SIZE
-
+from .config import RANDOM_STATE, TEST_SIZE
 from .metrics import evaluate_model
 from .preprocessing import build_preprocessor
 from .results import create_results_dataframe
+from .io import save_model, save_dataframe
 
-def train_model(model, X, y):
+
+def train_model(
+    model,
+    X,
+    y,
+    model_name=None,
+):
+    """
+    Generic training function for all models.
+    """
 
     preprocessor = build_preprocessor(X)
 
@@ -46,8 +54,23 @@ def train_model(model, X, y):
         test_pred,
     )
 
-    return (
-        pipeline,
-        metrics,
-        prediction_df,
-    )
+    # ------------------------------------------------------
+    # Automatically save outputs
+    # ------------------------------------------------------
+    if model_name is not None:
+
+        save_model(
+            pipeline,
+            f"{model_name}.pkl",
+        )
+
+        save_dataframe(
+            prediction_df,
+            f"{model_name}_predictions.csv",
+        )
+
+    return {
+        "pipeline": pipeline,
+        "metrics": metrics,
+        "predictions": prediction_df,
+    }
