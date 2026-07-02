@@ -73,6 +73,8 @@ The primary objectives of this project are:
 - Identify the most influential process variables governing bio-oil yield.
 - Build a reusable and extensible codebase that can support future HTL and biomass research.
 
+---
+
 # 2. Literature Review
 
 Hydrothermal Liquefaction (HTL) has become an important research area due to its ability to convert wet biomass directly into liquid biofuels without requiring energy-intensive drying. Over the past two decades, researchers have investigated the influence of biomass composition, reaction temperature, residence time, catalysts, and solvent conditions on bio-oil production. These studies have established HTL as one of the most promising technologies for sustainable biofuel generation.
@@ -101,6 +103,8 @@ From the existing literature, several research gaps can be identified:
 
 This project addresses these gaps by combining multiple regression algorithms, systematic hyperparameter optimization, comprehensive model comparison, and explainable AI within a modular software architecture that is both reproducible and extensible.
 
+---
+
 # 3. Dataset Description
 
 ## 3.1 Dataset Source
@@ -110,8 +114,6 @@ The dataset used in this study is a publicly available Hydrothermal Liquefaction
 The dataset consists of 2,284 experimentally validated HTL observations collected under different feedstock compositions and operating conditions. Each observation corresponds to an individual HTL experiment with associated biomass characteristics, reaction parameters, and measured product yields.
 
 The primary objective of this work is to predict the bio-oil yield (%) produced during the HTL process.
-
----
 
 ## 3.2 Dataset Characteristics
 
@@ -125,8 +127,6 @@ The final dataset used for model development contains:
 | Machine Learning Task | Regression |
 
 The dataset includes experiments performed using various biomass feedstocks such as microalgae, macroalgae, wood, food waste, sewage sludge, herbaceous biomass, and mixed biomass resources.
-
----
 
 ## 3.3 Feature Categories
 
@@ -176,8 +176,6 @@ These variables represent the HTL reaction conditions.
 - Additive
 - Additive Quantity
 
----
-
 ## 3.4 Target Variable
 
 The response variable used for prediction is:
@@ -187,8 +185,6 @@ The response variable used for prediction is:
 This continuous variable represents the percentage yield of bio-oil obtained after completion of the HTL process.
 
 The prediction of bio-oil yield is important because it directly reflects the efficiency of biomass conversion into renewable liquid fuel.
-
----
 
 ## 3.5 Data Preprocessing
 
@@ -216,19 +212,17 @@ using a fixed random seed to ensure reproducibility.
 
 The preprocessing operations and regression model were combined into a single Scikit-Learn Pipeline. This ensured that identical preprocessing transformations were consistently applied during both training and prediction, eliminating the possibility of data leakage.
 
----
-
 ## 3.6 Dataset Summary
 
 The dataset contains substantial diversity in both biomass composition and operating conditions. Such diversity enables machine learning algorithms to learn complex nonlinear relationships between feedstock characteristics, reaction parameters, and bio-oil yield.
 
 The relatively large number of experimental observations, combined with multiple chemical composition descriptors and process variables, makes this dataset well suited for developing robust regression models capable of generalizing across different HTL operating conditions.
 
+---
+
 # 4. Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was performed to understand the statistical characteristics of the dataset, identify relationships between variables, detect potential outliers, and guide the subsequent machine learning workflow. Multiple visualization techniques were employed to investigate the distribution of the target variable, relationships among numerical features, biomass composition, and variations across different feedstock categories.
-
----
 
 ## 4.1 Distribution of Bio-Oil Yield
 
@@ -238,13 +232,9 @@ The analysis indicated that bio-oil yield spans a broad range of values, reflect
 
 The absence of severe skewness suggests that the target variable is suitable for regression modelling without requiring logarithmic or power transformations.
 
-**Figure:** Distribution of Bio-Oil Yield
-
 **Figure 4.1:** Distribution of bio-oil yield.
 
-![Oil Distribution](figures/oil_distribution.png)
-
----
+![Oil Distribution](../outputs/figures/oil_distribution.png)
 
 ## 4.2 Correlation Analysis
 
@@ -254,13 +244,9 @@ The analysis revealed that several biomass composition variables exhibit moderat
 
 The correlation analysis also indicated that bio-oil yield depends on the combined influence of multiple variables rather than any single dominant parameter, motivating the use of nonlinear machine learning algorithms.
 
-**Figure:** Correlation Heatmap
-
 **Figure 4.2:** Correlation heatmap of numerical features.
 
-![Correlation Heatmap](figures/correlation_heatmap.png)
-
----
+![Correlation Heatmap](../outputs/figures/correlation_heatmap.png)
 
 ## 4.3 Biomass Resource Analysis
 
@@ -270,13 +256,9 @@ Resource-wise analysis revealed noticeable differences in average bio-oil yield 
 
 These observations agree with established HTL literature and provide confidence regarding the quality of the dataset.
 
-**Figure:** Bio-Oil Yield across Biomass Resources
-
 **Figure 4.3:** Bio-oil yield across different biomass resources.
 
-![Resource Analysis](figures/resource_vs_oil.png)
-
----
+![Resource Analysis](../outputs/figures/resource_vs_oil.png)
 
 ## 4.4 Biomass Composition Analysis
 
@@ -294,20 +276,13 @@ The analysis revealed substantial variation among feedstocks, indicating that co
 
 The generated ternary composition plots further illustrated the diversity of biomass samples and highlighted the wide coverage of chemical compositions represented in the dataset.
 
-**Figures:**
-
-- Biomass Composition Analysis
-- Ternary Composition Plot
-
 **Figure 4.4:** Biomass composition ternary plot.
 
-![Ternary Plot](figures/ternary_composition.png)
+![Ternary Plot](../outputs/figures/ternary_composition.png)
 
 **Figure 4.5:** Biomass composition distribution.
 
-![Composition Histogram](figures/composition_sum_histogram.png)
-
----
+![Composition Histogram](../outputs/figures/composition_sum_histogram.png)
 
 ## 4.5 Temperature and Process Variables
 
@@ -317,25 +292,17 @@ Reaction temperature exhibited a noticeable nonlinear relationship with bio-oil 
 
 These observations provided strong motivation for selecting ensemble tree-based regression algorithms capable of learning nonlinear decision boundaries.
 
-**Figures:**
-
-- Oil Yield vs Temperature
-- Oil Yield vs HHV
-- Oil Yield vs Lipids
-
 **Figure 4.6:** Relationship between reaction temperature and bio-oil yield.
 
-![Oil vs Temperature](figures/oil_vs_temperature.png)
+![Oil vs Temperature](../outputs/figures/oil_vs_temperature.png)
 
 **Figure 4.7:** Relationship between lipid content and bio-oil yield.
 
-![Oil vs Lipids](figures/oil_vs_lipids.png)
+![Oil vs Lipids](../outputs/figures/oil_vs_lipids.png)
 
 **Figure 4.8:** Relationship between Higher Heating Value and bio-oil yield.
 
-![Oil vs HHV](figures/oil_vs_hhv.png)
-
----
+![Oil vs HHV](../outputs/figures/oil_vs_hhv.png)
 
 ## 4.6 Distribution Comparison
 
@@ -345,20 +312,13 @@ Unlike standard box plots, violin plots simultaneously display summary statistic
 
 The analysis demonstrated considerable variability across experimental conditions while revealing relatively few extreme outliers that would require removal.
 
-**Figures:**
-
-- Violin Plot – Bio-Oil Yield
-- Violin Plot – Char Yield
-
 **Figure 4.9:** Violin plot of bio-oil yield.
 
-![Violin Oil](figures/violin_oil.png)
+![Violin Oil](../outputs/figures/violin_oil.png)
 
 **Figure 4.10:** Violin plot of char yield.
 
-![Violin Char](figures/violin_char.png)
-
----
+![Violin Char](../outputs/figures/violin_char.png)
 
 ## 4.7 Composition Consistency
 
@@ -368,13 +328,9 @@ The analysis confirmed that most biomass samples exhibit chemically consistent c
 
 This analysis ensured that potentially informative observations were not removed unnecessarily during preprocessing.
 
-**Figure:** Broken-Axis Composition Analysis
-
 **Figure 4.11:** Broken-axis visualization of biomass composition.
 
-![Broken Axis](figures/composition_broken_axis.png)
-
----
+![Broken Axis](../outputs/figures/composition_broken_axis.png)
 
 ## 4.8 Summary of EDA
 
@@ -389,6 +345,8 @@ The exploratory analysis provided several important insights that guided the rem
 
 These observations strongly motivated the use of ensemble tree-based machine learning algorithms and explainable artificial intelligence techniques in the subsequent modelling phase.
 
+---
+
 # 5. Methodology
 
 ## 5.1 Overview
@@ -400,164 +358,137 @@ Unlike conventional notebook-based implementations, the proposed framework separ
 The overall workflow adopted in this project is illustrated below.
 
 ```
-
 Raw Dataset
-
-↓
-
+    ↓
 Data Cleaning & Preprocessing
-
-↓
-
+    ↓
 Feature Engineering
-
-↓
-
+    ↓
 Train-Test Split
-
-↓
-
+    ↓
 Model Training
-
-↓
-
+    ↓
 Hyperparameter Optimization
-
-↓
-
+    ↓
 Model Evaluation
-
-↓
-
+    ↓
 Explainability Analysis
-
-↓
-
+    ↓
 Model Comparison Dashboard
-
-↓
-
+    ↓
 Final Results
+```
 
-5.2 Software Architecture
+## 5.2 Software Architecture
 
 The project follows a modular software architecture consisting of four primary components.
 
-Core Module
+### Core Module
 
 The core package provides reusable utilities that form the foundation of the machine learning framework.
 
 Its responsibilities include:
 
-Dataset loading
-Data preprocessing
-Pipeline construction
-Performance metrics
-Model factory
-Input/Output utilities
-Experiment logging
-Generic model trainer
-Hyperparameter search framework
+- Dataset loading
+- Data preprocessing
+- Pipeline construction
+- Performance metrics
+- Model factory
+- Input/Output utilities
+- Experiment logging
+- Generic model trainer
+- Hyperparameter search framework
 
 This design ensures that common functionality is implemented only once and reused across all machine learning models.
 
-Models Module
+### Models Module
 
 The models package contains implementations of all regression algorithms evaluated in this study.
 
 Implemented models include:
 
-Linear Regression
-Gradient Boosting Regressor
-Random Forest Regressor
-Extra Trees Regressor
-XGBoost Regressor
-CatBoost Regressor
+- Linear Regression
+- Gradient Boosting Regressor
+- Random Forest Regressor
+- Extra Trees Regressor
+- XGBoost Regressor
+- CatBoost Regressor
 
 Each model shares the same preprocessing pipeline and evaluation methodology, ensuring a fair comparison of predictive performance.
 
-Visualization Module
+### Visualization Module
 
 The visualization package generates publication-quality figures used for exploratory analysis and model interpretation.
 
 Implemented visualizations include:
 
-Correlation Heatmap
-Feature Importance
-SHAP Analysis
-Partial Dependence Plots
-Permutation Importance
-Error Distribution
-Parity Plot
-Violin Plots
-Model Comparison Dashboard
-Project Summary Dashboard
-Experiments Module
+- Correlation Heatmap
+- Feature Importance
+- SHAP Analysis
+- Partial Dependence Plots
+- Permutation Importance
+- Error Distribution
+- Parity Plot
+- Violin Plots
+- Model Comparison Dashboard
+- Project Summary Dashboard
+
+### Experiments Module
 
 The experiments package manages hyperparameter optimization and comparative evaluation.
 
 Its responsibilities include:
 
-Randomized Search Cross Validation
-Performance comparison
-Result logging
-Saving optimized models
-Cross-validation summaries
-5.3 Data Preprocessing Pipeline
+- Randomized Search Cross Validation
+- Performance comparison
+- Result logging
+- Saving optimized models
+- Cross-validation summaries
+
+## 5.3 Data Preprocessing Pipeline
 
 Before model training, several preprocessing operations were applied to ensure data consistency.
 
-Missing Value Imputation
+### Missing Value Imputation
 
 Numerical variables were imputed using the median value, while categorical variables were imputed using the most frequent category.
 
 This approach preserves all experimental observations without discarding incomplete records.
 
-Categorical Encoding
+### Categorical Encoding
 
 Categorical variables were transformed using One-Hot Encoding.
 
 This encoding enables tree-based regression algorithms to effectively utilize categorical process information while avoiding arbitrary ordinal relationships.
 
-Pipeline Construction
+### Pipeline Construction
 
 All preprocessing operations were integrated into a Scikit-Learn Pipeline.
 
 Using a pipeline provides several advantages:
 
-Eliminates data leakage
-Ensures identical preprocessing during training and prediction
-Improves reproducibility
-Simplifies model deployment
-5.4 Machine Learning Models
+- Eliminates data leakage
+- Ensures identical preprocessing during training and prediction
+- Improves reproducibility
+- Simplifies model deployment
+
+## 5.4 Machine Learning Models
 
 Multiple regression algorithms were evaluated to identify the most suitable predictive model for HTL bio-oil yield prediction.
 
-Linear Regression
+**Linear Regression** — Served as the baseline model for comparison.
 
-Served as the baseline model for comparison.
+**Gradient Boosting** — Introduced sequential ensemble learning capable of capturing nonlinear relationships.
 
-Gradient Boosting
+**Random Forest** — Used bootstrap aggregation and randomized feature selection to reduce variance and improve predictive performance.
 
-Introduced sequential ensemble learning capable of capturing nonlinear relationships.
+**Extra Trees** — Introduced additional randomness during tree construction to increase diversity among ensemble members.
 
-Random Forest
+**XGBoost** — Implemented gradient boosting with advanced regularization techniques to improve predictive accuracy and reduce overfitting.
 
-Used bootstrap aggregation and randomized feature selection to reduce variance and improve predictive performance.
+**CatBoost** — Evaluated gradient boosting with native categorical feature handling to investigate its suitability for HTL data.
 
-Extra Trees
-
-Introduced additional randomness during tree construction to increase diversity among ensemble members.
-
-XGBoost
-
-Implemented gradient boosting with advanced regularization techniques to improve predictive accuracy and reduce overfitting.
-
-CatBoost
-
-Evaluated gradient boosting with native categorical feature handling to investigate its suitability for HTL data.
-
-5.5 Hyperparameter Optimization
+## 5.5 Hyperparameter Optimization
 
 Model performance was further improved using Randomized Search Cross Validation.
 
@@ -565,70 +496,56 @@ Randomized Search was selected because it efficiently explores large hyperparame
 
 The optimization procedure employed:
 
-Repeated K-Fold Cross Validation
-Randomized parameter sampling
-Parallel computation
-Performance evaluation using R² score
+- Repeated K-Fold Cross Validation
+- Randomized parameter sampling
+- Parallel computation
+- Performance evaluation using R² score
 
 Hyperparameter tuning was performed for:
 
-Random Forest
-XGBoost
+- Random Forest
+- XGBoost
 
 The optimized models demonstrated improved predictive performance compared with their default counterparts.
 
-5.6 Model Evaluation
+## 5.6 Model Evaluation
 
 Regression models were evaluated using two complementary performance metrics.
 
-Coefficient of Determination (R²)
+**Coefficient of Determination (R²)** — Measures the proportion of variance explained by the predictive model. Higher values indicate better predictive capability.
 
-R² measures the proportion of variance explained by the predictive model.
-
-Higher values indicate better predictive capability.
-
-Mean Absolute Error (MAE)
-
-MAE measures the average magnitude of prediction errors.
-
-Lower values indicate better prediction accuracy.
+**Mean Absolute Error (MAE)** — Measures the average magnitude of prediction errors. Lower values indicate better prediction accuracy.
 
 Evaluating both metrics provides a balanced assessment of model performance.
 
-5.7 Explainable Artificial Intelligence
+## 5.7 Explainable Artificial Intelligence
 
 To improve model transparency, several explainability techniques were incorporated into the workflow.
 
-SHAP Analysis
+**SHAP Analysis** — Quantified the contribution of individual features to each prediction while providing global feature importance.
 
-Quantified the contribution of individual features to each prediction while providing global feature importance.
+**Partial Dependence Plots** — Illustrated how changes in individual variables influence predicted bio-oil yield.
 
-Partial Dependence Plots
+**Permutation Importance** — Measured the reduction in predictive performance caused by randomly permuting each feature.
 
-Illustrated how changes in individual variables influence predicted bio-oil yield.
-
-Permutation Importance
-
-Measured the reduction in predictive performance caused by randomly permuting each feature.
-
-Feature Importance
-
-Tree-based feature importance provided an additional global ranking of influential variables.
+**Feature Importance** — Tree-based feature importance provided an additional global ranking of influential variables.
 
 Together, these techniques improve confidence in the predictive models while providing scientific insight into HTL process behaviour.
 
-5.8 Reproducibility
+## 5.8 Reproducibility
 
 Several design decisions were incorporated to ensure experimental reproducibility.
 
-Fixed random seed throughout the workflow.
-Unified preprocessing pipeline.
-Modular project architecture.
-Automatic experiment logging.
-Automatic model serialization.
-Automatic generation of figures and prediction files.
+- Fixed random seed throughout the workflow.
+- Unified preprocessing pipeline.
+- Modular project architecture.
+- Automatic experiment logging.
+- Automatic model serialization.
+- Automatic generation of figures and prediction files.
 
 These practices enable the complete workflow to be reproduced with minimal user intervention while facilitating future extensions of the framework.
+
+---
 
 # 6. Experimental Results and Discussion
 
@@ -637,8 +554,6 @@ These practices enable the complete workflow to be reproduced with minimal user 
 All machine learning models were trained and evaluated using the same preprocessing pipeline, train-test split, and evaluation metrics to ensure a fair comparison. Numerical features were imputed using the median value, categorical variables were one-hot encoded, and the resulting preprocessing pipeline was integrated with each regression model using the Scikit-Learn Pipeline framework.
 
 Model performance was evaluated using the coefficient of determination (R²) and Mean Absolute Error (MAE). Hyperparameter optimization was performed using Randomized Search Cross Validation for the Random Forest and XGBoost models.
-
----
 
 ## 6.2 Model Performance Comparison
 
@@ -661,28 +576,26 @@ Among all evaluated models, the tuned XGBoost regressor achieved the highest Tes
 
 **Figure 6.1:** Overall Project Summary Dashboard
 
-![Project Summary](figures/project_summary_dashboard.png)
+![Project Summary](../outputs/figures/project_summary_dashboard.png)
 
 **Figure 6.2:** Comparison of Test R² across all evaluated machine learning models.
 
-![Model Comparison R2](figures/model_r2_comparison.png)
+![Model Comparison R2](../outputs/figures/model_r2_comparison.png)
 
 **Figure 6.3:** Comparison of Test MAE across all evaluated machine learning models.
 
-![Model Comparison MAE](figures/model_mae_comparison.png)
-
----
+![Model Comparison MAE](../outputs/figures/model_mae_comparison.png)
 
 ## 6.3 Effect of Hyperparameter Optimization
 
 Hyperparameter optimization produced measurable improvements for both Random Forest and XGBoost.
 
-For Random Forest:
+**For Random Forest:**
 
 - Test R² improved from **0.8624** to **0.8659**
 - Test MAE decreased from **4.4111** to **4.2796**
 
-For XGBoost:
+**For XGBoost:**
 
 - Test R² improved from **0.8634** to **0.8689**
 - Test MAE decreased from **4.4094** to **4.2589**
@@ -691,13 +604,11 @@ Although the numerical improvements appear modest, they demonstrate that systema
 
 **Figure 6.4:** Parity plot comparing actual and predicted bio-oil yield values.
 
-![Parity Plot](figures/parity_plot.png)
+![Parity Plot](../outputs/figures/parity_plot.png)
 
 **Figure 6.5:** Error distribution of prediction residuals.
 
-![Error Distribution](figures/error_distribution.png)
-
----
+![Error Distribution](../outputs/figures/error_distribution.png)
 
 ## 6.4 Model Comparison
 
@@ -709,15 +620,11 @@ The tuned XGBoost model achieved the highest predictive performance among all ev
 
 Its gradient boosting framework effectively captured the nonlinear interactions between biomass composition and operating conditions while maintaining good generalization on unseen data.
 
----
-
 ### Tuned Random Forest
 
 The tuned Random Forest achieved performance very close to the tuned XGBoost model.
 
 Its ensemble of decision trees provides high predictive accuracy while remaining relatively simple to interpret, making it an attractive alternative when computational efficiency and model simplicity are important.
-
----
 
 ### Extra Trees
 
@@ -727,15 +634,11 @@ However, its nearly perfect training performance (Train R² ≈ 0.999) compared 
 
 Although Extra Trees accurately fits the training data, its ability to generalize to previously unseen experiments is slightly lower than the tuned XGBoost model.
 
----
-
 ### CatBoost
 
 CatBoost produced the lowest predictive performance among the evaluated ensemble methods.
 
 One possible explanation is that after one-hot encoding, the dataset contains relatively few high-cardinality categorical variables, reducing CatBoost's natural advantage over other gradient boosting algorithms.
-
----
 
 ## 6.5 Explainability Analysis
 
@@ -755,37 +658,35 @@ The consistency among multiple explainability techniques increases confidence th
 
 **Figure 6.6:** SHAP summary plot showing global feature importance.
 
-![SHAP Beeswarm](figures/shap_beeswarm.png)
+![SHAP Beeswarm](../outputs/figures/shap_beeswarm.png)
 
 **Figure 6.7:** SHAP feature importance ranked by average absolute SHAP value.
 
-![SHAP Bar](figures/shap_bar.png)
+![SHAP Bar](../outputs/figures/shap_bar.png)
 
 **Figure 6.8:** Permutation importance ranking of input variables.
 
-![Permutation Importance](figures/permutation_importance.png)
+![Permutation Importance](../outputs/figures/permutation_importance.png)
 
 **Figure 6.9:** Partial Dependence Plot for Lipids.
 
-![PDP Lipids](figures/pdp_Lipids.png)
+![PDP Lipids](../outputs/figures/pdp_Lipids.png)
 
 **Figure 6.10:** Partial Dependence Plot for Temperature.
 
-![PDP Temperature](figures/pdp_Temperature.png)
+![PDP Temperature](../outputs/figures/pdp_Temperature.png)
 
 **Figure 6.11:** Partial Dependence Plot for Proteins.
 
-![PDP Proteins](figures/pdp_Proteins.png)
+![PDP Proteins](../outputs/figures/pdp_Proteins.png)
 
 **Figure 6.12:** Partial Dependence Plot for Carbohydrates.
 
-![PDP Carbohydrates](figures/pdp_CarboHydrates.png)
+![PDP Carbohydrates](../outputs/figures/pdp_CarboHydrates.png)
 
 **Figure 6.13:** Partial Dependence Plot for Higher Heating Value (HHV).
 
-![PDP HHV](figures/pdp_HHVResource.png)
-
----
+![PDP HHV](../outputs/figures/pdp_HHVResource.png)
 
 ## 6.6 Discussion
 
@@ -798,6 +699,8 @@ The explainability analysis further confirms that biomass composition plays a do
 The modular software framework developed in this project ensures that additional regression algorithms, optimization strategies, or explainability methods can be incorporated with minimal modifications. Consequently, the framework serves not only as a predictive tool but also as a reusable research platform for future investigations into hydrothermal liquefaction and biomass conversion.
 
 Overall, the experimental results demonstrate that the combination of modern ensemble learning methods and explainable artificial intelligence provides an accurate, interpretable, and reproducible approach for predicting bio-oil yield from HTL experiments.
+
+---
 
 # 7. Conclusion
 
@@ -812,6 +715,8 @@ Beyond predictive accuracy, this work emphasized model interpretability through 
 A major contribution of this work is the development of a modular and reusable machine learning framework. Unlike notebook-based implementations, the framework separates data preprocessing, model training, hyperparameter optimization, visualization, and explainability into independent components, improving maintainability, reproducibility, and extensibility.
 
 Overall, the results demonstrate that ensemble tree-based machine learning algorithms, combined with modern explainability techniques, provide an accurate and interpretable approach for bio-oil yield prediction. The developed framework can serve as a foundation for future HTL research and broader applications of machine learning in biomass conversion and sustainable energy systems.
+
+---
 
 # 8. Future Work
 
@@ -828,23 +733,20 @@ Several opportunities exist for extending the present work.
 
 These extensions would further enhance both the predictive capability and practical applicability of the proposed framework.
 
+---
+
 # References
 
 1. Peterson, A. A., Vogel, F., Lachance, R. P., Fröling, M., Antal Jr., M. J., & Tester, J. W. (2008). Thermochemical biofuel production in hydrothermal media.
-
 2. Elliott, D. C. Hydrothermal liquefaction of biomass.
-
 3. Breiman, L. (2001). Random Forests.
-
 4. Friedman, J. H. (2001). Greedy Function Approximation: A Gradient Boosting Machine.
-
 5. Chen, T., & Guestrin, C. (2016). XGBoost: A Scalable Tree Boosting System.
-
 6. Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018). CatBoost: Unbiased Boosting with Categorical Features.
-
 7. Lundberg, S. M., & Lee, S. I. (2017). A Unified Approach to Interpreting Model Predictions.
-
 8. Pedregosa, F., et al. (2011). Scikit-Learn: Machine Learning in Python.
+
+---
 
 # Appendix
 
