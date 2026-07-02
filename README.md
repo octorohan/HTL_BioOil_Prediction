@@ -1,199 +1,128 @@
 # HTL Bio-Oil Yield Prediction using Machine Learning
 
-## Overview
+<p align="center">
+<img src="outputs/figures/project_summary_dashboard.png" width="900">
+</p>
 
-This project predicts **bio-oil yield (%)** from Hydrothermal Liquefaction (HTL) experiments using machine learning.
+<p align="center">
 
-The work evaluates multiple regression algorithms, performs hyperparameter optimization, and explains model predictions using SHAP, Partial Dependence Plots (PDP), and Permutation Importance.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
+![XGBoost](https://img.shields.io/badge/XGBoost-Regression-green)
+![CatBoost](https://img.shields.io/badge/CatBoost-Ensemble-yellow)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-The project is built as a modular ML framework instead of a single notebook.
-
----
-
-# Dataset
-
-Source:
-
-PNNL HTL Database
-
-Dataset contains:
-
-- 2284 experiments
-- 29 input features
-- Bio-oil Yield (%) prediction target
-
-Features include:
-
-- Biomass composition
-- Operating temperature
-- Heating profile
-- Residence time
-- Solvent
-- HHV
-- Lipids
-- Proteins
-- Ash
-- Cellulose
-- Hemicellulose
-- etc.
+</p>
 
 ---
 
-# Project Structure
+## Project Overview
 
-```
-HTL_BioOil_Prediction/
+This project develops a modular machine learning framework for predicting bio-oil yield from Hydrothermal Liquefaction (HTL) experiments.
 
-├── data/
-├── outputs/
-│   ├── figures/
-│   ├── models/
-│   └── *.csv
-│
-├── src/
-│   ├── core/
-│   ├── models/
-│   ├── visualization/
-│   ├── experiments/
-│   └── legacy/
-│
-├── requirements.txt
-└── README.md
-```
+Unlike notebook-based implementations, the project provides a reusable software architecture for preprocessing, training, hyperparameter optimization, explainability, and visualization.
 
 ---
 
-# Workflow
+## Key Features
+
+- Modular ML framework
+- Six regression algorithms
+- Hyperparameter optimization
+- SHAP explainability
+- Partial Dependence Plots
+- Permutation Importance
+- Model comparison dashboard
+- Automated experiment logging
+- Publication-quality visualizations
+
+---
+
+## Dataset
+
+| Property | Value |
+|-----------|-------|
+| Samples | 2284 |
+| Features | 29 |
+| Task | Regression |
+| Target | Bio-Oil Yield (%) |
+
+---
+
+## Workflow
 
 ```
 Dataset
-    │
-    ▼
+      │
+      ▼
 Preprocessing
-    │
-    ▼
-Feature Engineering
-    │
-    ▼
+      │
+      ▼
 Model Training
-    │
-    ▼
+      │
+      ▼
 Hyperparameter Optimization
-    │
-    ▼
-Model Comparison
-    │
-    ▼
+      │
+      ▼
 Explainability
-    │
-    ▼
-Final Dashboard
+      │
+      ▼
+Dashboard
 ```
 
 ---
 
-# Models Evaluated
-
-- Linear Regression
-- Gradient Boosting
-- Random Forest
-- Extra Trees
-- XGBoost
-- CatBoost
-
-Optimized Models
-
-- Tuned Random Forest
-- Tuned XGBoost
-
----
-
-# Explainability
-
-The project includes:
-
-- SHAP Values
-- Partial Dependence Plots
-- Permutation Importance
-- Feature Importance
-
----
-
-# Best Model
+## Results
 
 | Model | Test R² | Test MAE |
-|-------|---------|----------|
-| Tuned XGBoost | **0.8689** | **4.2589** |
+|--------|---------|----------|
+| 🥇 Tuned XGBoost | **0.8689** | **4.2589** |
+| Tuned Random Forest | 0.8659 | 4.2796 |
+| XGBoost | 0.8634 | 4.4094 |
+| Random Forest | 0.8624 | 4.4111 |
+| Extra Trees | 0.8619 | **4.1621** |
+| CatBoost | 0.8370 | 5.1441 |
 
 ---
 
-# Important Features
+## Explainability
 
-Permutation Importance identified:
+Top predictive features:
 
 - Lipids
 - Temperature
-- HHV
+- Higher Heating Value
 - Proteins
 - Fatty Acids
 
-as the strongest predictors of bio-oil yield.
+---
+
+## Repository Structure
+
+```text
+src/
+ ├── core/
+ ├── models/
+ ├── experiments/
+ ├── visualization/
+ └── legacy/
+```
 
 ---
 
-# Results
-
-The project automatically generates:
-
-- Parity plots
-- Error distribution
-- SHAP analysis
-- PDP plots
-- Violin plots
-- Correlation heatmap
-- Model comparison dashboard
-
----
-
-# Installation
+## Installation
 
 ```bash
-git clone <repo>
-
-cd HTL_BioOil_Prediction
-
 pip install -r requirements.txt
 ```
 
 ---
 
-# Run
-
-Train Random Forest
-
-```bash
-python -m src.models.random_forest
-```
-
-Train XGBoost
+## Run
 
 ```bash
 python -m src.models.xgboost
 ```
-
-Hyperparameter Search
-
-```bash
-python -m src.experiments.hyperparameter_tuning
-```
-
-Permutation Importance
-
-```bash
-python -m src.visualization.permutation_importance
-```
-
-Dashboard
 
 ```bash
 python -m src.visualization.model_dashboard
@@ -201,32 +130,18 @@ python -m src.visualization.model_dashboard
 
 ---
 
-# Technologies
+## Future Work
 
-- Python
-- Scikit-Learn
-- XGBoost
-- CatBoost
-- Pandas
-- NumPy
-- SHAP
-- Matplotlib
-
----
-
-# Future Work
-
-- Deep Learning models
-- Graph Neural Networks
-- Uncertainty Estimation
 - Bayesian Optimization
-- AutoML
+- LightGBM
+- Deep Learning
 - Streamlit Deployment
+- Multi-output HTL prediction
 
 ---
 
-# Author
+## Author
 
-Rohan
+**Rohan**
 
 Indian Institute of Technology Kharagpur
